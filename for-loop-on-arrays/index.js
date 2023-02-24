@@ -55,16 +55,30 @@
 // console.log(PI);
 
 let hDOM = document.querySelector("#deneme")
+let ulDOM = document.querySelector(".liste")
+let list  = document.createElement("li")
+let h1DOM = document.querySelector("#remove")
 
 
 let day;
 let something;
+let week;
+
+function yapılacak() {
+  ulDOM.appendChild(list);  
+  list.innerHTML = `bugün yapılacaklar: ${week}`
+}
 
 switch(new Date().getDay()){
   case 0:
   case 6:
     day = "haftasonu";
+    week = "kızlarımla gezmek ve eğlenmek ";
     something = "güzel bir gün.";
+    yapılacak();
+    h1DOM.innerHTML = "GEZ, DOLAŞ";
+    h1DOM.style.color = "blue";
+    h1DOM.style.backgroundColor = "red";
       break;
   case 1:
   case 2:
@@ -73,8 +87,13 @@ switch(new Date().getDay()){
   case 5:
     day = "hafta içi"
     something = "zor bir gün"
+    week = "ders çalışmak";
+    yapılacak();
+    h1DOM.innerHTML = "DERS ÇALIŞ";
+    h1DOM.style.color = "red";
+    h1DOM.style.backgroundColor = "blue";
       break;
 }
 
-hDOM.innerHTML = `bugün: ${day}, ${something}`
+hDOM.innerHTML = `bugün ${day}, ${something}`
 
