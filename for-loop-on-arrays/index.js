@@ -54,31 +54,32 @@
 // const PI = Math.PI;
 // console.log(PI);
 
-let hDOM = document.querySelector("#deneme")
-let ulDOM = document.querySelector(".liste")
-let list  = document.createElement("li")
-let h1DOM = document.querySelector("#remove")
+const hDOM = document.querySelector("#deneme")
+const ulDOM = document.querySelector(".liste")
+const list  = document.createElement("li")
+const span = document.createElement("span")
+const h1DOM = document.querySelector("#remove")
 
 
 let day;
 let something;
 let week;
 
-function yapılacak() {
+function yapilacak(list) {
   ulDOM.appendChild(list);  
   list.innerHTML = `bugün yapılacaklar: ${week}`
 }
 
-switch(new Date().getDay()){
+switch(new Date().getDay()-1){
   case 0:
   case 6:
     day = "haftasonu";
-    week = "kızlarımla gezmek ve eğlenmek ";
+    week = " Kızlarımla gezmek ve eğlenmek ";
     something = "güzel bir gün.";
-    yapılacak();
+    yapilacak(list);
     h1DOM.innerHTML = "GEZ, DOLAŞ";
     h1DOM.style.color = "blue";
-    h1DOM.style.backgroundColor = "red";
+    h1DOM.style.backgroundColor = "rgb(194, 118, 118)";
       break;
   case 1:
   case 2:
@@ -88,10 +89,10 @@ switch(new Date().getDay()){
     day = "hafta içi"
     something = "zor bir gün"
     week = "ders çalışmak";
-    yapılacak();
+    yapilacak(span);
     h1DOM.innerHTML = "DERS ÇALIŞ";
     h1DOM.style.color = "red";
-    h1DOM.style.backgroundColor = "blue";
+    h1DOM.style.backgroundColor = "aquamarine";
       break;
 }
 
