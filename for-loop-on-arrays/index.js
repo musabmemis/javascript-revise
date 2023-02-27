@@ -70,7 +70,7 @@ function yapilacak(list) {
   list.innerHTML = `bugün yapılacaklar: ${week}`
 }
 
-switch(new Date().getDay()-1){
+switch(new Date().getDay()){
   case 0:
   case 6:
     day = "haftasonu";
