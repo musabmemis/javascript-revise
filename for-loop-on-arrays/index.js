@@ -98,3 +98,40 @@ switch(new Date().getDay()){
 
 hDOM.innerHTML = `bugün ${day}, ${something}`
 
+let n = [1, 2, 3, 4]
+
+n.forEach(a => { 
+  console.log((a*a)+2)
+});
+
+let array = ["ali", "mehmet", "ahmet", "mahmut", "behçet"]
+let anotherArray = ["git", "gel", "göm", "bit", "sual"]
+let oylesine = ["bak", "sen"]
+
+array.unshift("1")
+array.push("2")
+
+array.push("3")
+console.log(array);
+
+array.pop()
+console.log(array);
+
+array.push(anotherArray)
+console.log(array);
+
+array.unshift(oylesine)
+console.log(array);
+
+console.log(array[0]);
+console.log(array[0][1]);
+
+let newArray = [...oylesine, ...anotherArray]
+console.log(newArray);
+
+
+
+let arr = ["er", "er", "kişi", "kişi", "niyetine"]
+
+let newArr = [...new set(arr)]
+console.log();
