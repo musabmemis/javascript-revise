@@ -98,10 +98,10 @@ switch(new Date().getDay()){
 
 hDOM.innerHTML = `bugün ${day}, ${something}`
 
-let n = [1, 2, 3, 4]
+let numbers = [1, 2, 3, 4]
 
-n.forEach(a => { 
-  console.log((a*a)+2)
+numbers.forEach(number => { 
+  console.log((number*number)+2)
 });
 
 let array = ["ali", "mehmet", "ahmet", "mahmut", "behçet"]
@@ -131,7 +131,4 @@ console.log(newArray);
 
 
 
-let arr = ["er", "er", "kişi", "kişi", "niyetine"]
-
-let newArr = [...new set(arr)]
-console.log();
+let arr = ["er", "kişi", "niyetine"]
