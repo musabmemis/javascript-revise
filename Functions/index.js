@@ -26,7 +26,7 @@ let people = [
   {
     firstName: "Muhammed",
     lastName: "Ramazan",
-    job: "machinery engineer",
+    job: "mechanical engineer",
     salary: 15,
   },
   {
@@ -38,4 +38,17 @@ let people = [
   { firstName: "Muaz", lastName: "Memiş", job: "engineer", salary: 40 },
 ];
 
-for (let item of people){}
+// Arrow Functions
+
+hello = () => {
+  document.getElementById("btn").innerHTML += `<button>Button</button>`;
+};
+
+window.addEventListener("load", hello);
+// window.addEventListener("load", () => console.log("hello world")); // one line 
+// window.addEventListener("load", () => {     // multiple  lines.
+//   console.log("hello world1");             
+//   console.log("hello world2");
+// });
+
+document.getElementById("btn").addEventListener("click", hello);
